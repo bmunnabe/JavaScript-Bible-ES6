@@ -4,7 +4,7 @@ const num = {
   info: () => {
     console.log(this); // Window
     return this.value;
-  }
+  },
   info2: function info() {
     console.log(this); // num object
     return this.value;
@@ -19,7 +19,7 @@ const anotherNum = {
   info: () => {
     console.log(this); // still Window
     return this.value;
-  }
+  },
   info2: function info() {
     console.log(this); // newNum object if called with info.call(newNum)
     return this.value;
@@ -41,7 +41,7 @@ const str = {
       console.log(this); // Window
       console.log(this.value); // undefined
     }, 1000);
-  }
+  },
 
   // Option 1
   greet1: function greet() {
@@ -50,7 +50,7 @@ const str = {
       console.log(self);
       console.log(self.value); // "Delayed greeting"
     }, 1000);
-  }
+  },
 
   // Option 2
   greet2: function greet() {
@@ -61,7 +61,7 @@ const str = {
       }.bind(this),
       1000
     );
-  }
+  },
 
   // Option 3
   greet3: function greet() {
